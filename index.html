@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>
+            AGENDAMENTO - CLINICA
+        </title>
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+
+    <body>
+        <h1>Agendamento de Consultas - Clínica de Angiologia</h1>
+
+        <p>Adicione os dados do paciente abaixo.</p>
+        <table>
+            <tr>
+                <td>
+                    <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                        <div>
+                            <label>Nome:</label><label class="validation-error hide" id="val">Precisamos do seu nome, sem ele não da para saber quem é você!</label>
+                            <input type="text" name="nome" id="nome">
+                        </div>
+                        <div>
+                            <label>Endereço:</label> 
+                            <input type="text" name="endereco" id="endereco">
+                        </div>
+                        <div>
+                            <label>Telefone Celular:</label> 
+                            <input type="text" name="telcel" id="telcel">
+                        </div>
+                        <div>
+                            <label>Peso:</label> 
+                            <input type="text" name="peso" id="peso">
+                        </div>
+                        <div>
+                            <label>Altura:</label> 
+                            <input type="text" name="altura" id="altura">
+                        </div>
+                        <div>
+                            <label>Idade:</label> 
+                            <input type="text" name="idade" id="idade">
+                        </div>
+                        <div class="form-action-buttons"> 
+                            <input type="submit" value="Adicionar" class="btn">
+                        </div>
+                    </form>
+                </td>
+                <td id="list">
+                    <table class="list" id="list-todo">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Endereço</th>
+                                <th>Telefone Celular</th>
+                                <th>Peso</th>
+                                <th>Altura</th>
+                                <th>Idade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <footer>
+            Qualquer dúvida procure por <strong> Guilherme Lopes Ferreira </strong>
+        </footer>
+
+        <script src="../Model/pacienteModel.js"></script>
+        <script src="../Controller/pacienteController.js"></script>
+    </body>
+
+</html>
